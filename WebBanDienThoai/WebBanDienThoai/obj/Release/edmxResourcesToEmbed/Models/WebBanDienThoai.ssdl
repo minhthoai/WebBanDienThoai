@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WEBBANDIENTHOAIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Alias" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Images" Type="nvarchar" MaxLength="500" />
+    <Property Name="Author" Type="nvarchar(max)" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Configure">
+    <Key>
+      <PropertyRef Name="ConfigID" />
+    </Key>
+    <Property Name="ConfigID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="256" />
+    <Property Name="Favicon" Type="nvarchar" MaxLength="256" />
+    <Property Name="NameCompany" Type="nvarchar" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmailReceive" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="11" />
+    <Property Name="Hotline" Type="nvarchar" MaxLength="150" />
+    <Property Name="Map" Type="nvarchar(max)" />
+    <Property Name="FanpageFacebook" Type="nvarchar(max)" />
+    <Property Name="IconFacebook" Type="nvarchar(max)" />
+    <Property Name="IconTwiiter" Type="nvarchar(max)" />
+    <Property Name="IconInstagram" Type="nvarchar(max)" />
+    <Property Name="IconYoutube" Type="nvarchar(max)" />
+    <Property Name="IconGoogle" Type="nvarchar(max)" />
+    <Property Name="MetaTitle" Type="nvarchar" MaxLength="250" />
+    <Property Name="MetaKeyword" Type="nvarchar" MaxLength="250" />
+    <Property Name="MetaDescription" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Content" Type="ntext" Nullable="false" />
+    <Property Name="ViewStatus" Type="bit" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="customerID" />
+    </Key>
+    <Property Name="customerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Home">
+    <Key>
+      <PropertyRef Name="HomeID" />
+    </Key>
+    <Property Name="HomeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Banner_1" Type="nvarchar" MaxLength="250" />
+    <Property Name="Link_banner_1" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_2" Type="nvarchar" MaxLength="250" />
+    <Property Name="Link_banner_2" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_3" Type="nvarchar" MaxLength="250" />
+    <Property Name="Link_banner_3" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_4" Type="nvarchar" MaxLength="250" />
+    <Property Name="Link_banner_4" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection1_Status" Type="bit" Nullable="false" />
+    <Property Name="title_category1" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection_home1" Type="int" />
+    <Property Name="button_more1" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection2_Status" Type="bit" Nullable="false" />
+    <Property Name="title_category2" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_Collection2" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_Collection2_Link" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection_home2" Type="int" />
+    <Property Name="button_more2" Type="nvarchar" MaxLength="250" />
+    <Property Name="title_left2" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection_left2" Type="int" />
+    <Property Name="button_more_left2" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection3_Status" Type="bit" Nullable="false" />
+    <Property Name="title_category3" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_Collection3" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_Collection3_Link" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection_home3" Type="int" />
+    <Property Name="button_more3" Type="nvarchar" MaxLength="250" />
+    <Property Name="title_right3" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection_right3" Type="int" />
+    <Property Name="button_more_right3" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection4_Status" Type="bit" Nullable="false" />
+    <Property Name="title_category4" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_Collection4" Type="nvarchar" MaxLength="250" />
+    <Property Name="Banner_Collection4_Link" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection_home4" Type="int" />
+    <Property Name="button_more4" Type="nvarchar" MaxLength="250" />
+    <Property Name="title_left4" Type="nvarchar" MaxLength="250" />
+    <Property Name="Collection_left4" Type="int" />
+    <Property Name="button_more_left4" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="ImageProduct">
+    <Key>
+      <PropertyRef Name="ImageProductID" />
+    </Key>
+    <Property Name="ImageProductID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FileImages" Type="nvarchar(max)" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MenuNavigation">
+    <Key>
+      <PropertyRef Name="MenuID" />
+    </Key>
+    <Property Name="MenuID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sequence" Type="int" />
+    <Property Name="MenuName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IconMenu" Type="nvarchar(max)" />
+    <Property Name="MenuParents" Type="int" Nullable="false" />
+    <Property Name="PageStyle" Type="int" Nullable="false" />
+    <Property Name="FormatPage" Type="int" />
+    <Property Name="GroupLink" Type="int" />
+    <Property Name="PageContent" Type="ntext" />
+    <Property Name="PageLink" Type="nvarchar" MaxLength="250" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="orderID" />
+    </Key>
+    <Property Name="orderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentID" Type="int" Nullable="false" />
+    <Property Name="TotalMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="ViewStatus" Type="bit" Nullable="false" />
+    <Property Name="Status" Type="bigint" Nullable="false" />
+    <Property Name="Note" Type="nvarchar(max)" />
+    <Property Name="customerID" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="orderDetailID" />
+    </Key>
+    <Property Name="orderDetailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="orderID" Type="int" Nullable="false" />
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Quanlity" Type="int" Nullable="false" />
+    <Property Name="TotalProduct" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="PaymentID" />
+    </Key>
+    <Property Name="PaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaymentName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Alias" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PriceSale" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Images" Type="nvarchar(max)" />
+    <Property Name="Quanlity" Type="int" Nullable="false" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="DescriptShort" Type="nvarchar(max)" />
+    <Property Name="Content" Type="ntext" />
+    <Property Name="Author" Type="nvarchar(max)" />
+    <Property Name="MetaDescription" Type="nvarchar(max)" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Slide">
+    <Key>
+      <PropertyRef Name="SliderID" />
+    </Key>
+    <Property Name="SliderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SortID" Type="int" Nullable="false" />
+    <Property Name="SliderName" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Images" Type="nvarchar(max)" />
+    <Property Name="URL" Type="nvarchar" MaxLength="250" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Fullname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="250" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_ImageProduct_dbo_Product_ProductID">
+    <End Role="Product" Type="Self.Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ImageProduct" Type="Self.ImageProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ImageProduct">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Order_dbo_Payment_PaymentID">
+    <End Role="Payment" Type="Self.Payment" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Payment">
+        <PropertyRef Name="PaymentID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="PaymentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_OrderDetail_dbo_Order_orderID">
+    <End Role="Order" Type="Self.Order" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="orderID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="orderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_OrderDetail_dbo_Product_ProductID">
+    <End Role="Product" Type="Self.Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Product_dbo_Category_CategoryID">
+    <End Role="Category" Type="Self.Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WEBBANDIENTHOAIModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Configure" EntityType="Self.Configure" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Home" EntityType="Self.Home" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ImageProduct" EntityType="Self.ImageProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MenuNavigation" EntityType="Self.MenuNavigation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Slide" EntityType="Self.Slide" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_ImageProduct_dbo_Product_ProductID" Association="Self.FK_dbo_ImageProduct_dbo_Product_ProductID">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ImageProduct" EntitySet="ImageProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Order_dbo_Payment_PaymentID" Association="Self.FK_dbo_Order_dbo_Payment_PaymentID">
+      <End Role="Payment" EntitySet="Payment" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_OrderDetail_dbo_Order_orderID" Association="Self.FK_dbo_OrderDetail_dbo_Order_orderID">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_OrderDetail_dbo_Product_ProductID" Association="Self.FK_dbo_OrderDetail_dbo_Product_ProductID">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Product_dbo_Category_CategoryID" Association="Self.FK_dbo_Product_dbo_Category_CategoryID">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Customer" Association="Self.FK_Order_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

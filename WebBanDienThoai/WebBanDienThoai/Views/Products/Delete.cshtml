@@ -1,0 +1,159 @@
+﻿
+
+@model WebBanDienThoai.Models.Product
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@if (Convert.ToInt32(Session["role"].ToString()) == 2)
+{
+    <h2>Delete</h2>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Categories.CategoryName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Categories.CategoryName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Alias)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Alias)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PriceSale)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PriceSale)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Images)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Images)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Quanlity)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Quanlity)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DescriptShort)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DescriptShort)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MetaTitle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MetaTitle)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MetaKeyword)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MetaKeyword)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MetaDescription)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MetaDescription)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CreatedAt)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CreatedAt)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+}
+else
+{
+    <div id="404" class="page-not not-found bg_w">
+        <div class="columns-container">
+            <div class="container" id="columns">
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="img-404 text-center">
+                            <img src="/Content/ShopPage/images/404.png" alt="Lỗi 404 không tìm thấy trang">
+                        </div>
+                        <div class="text-center"><a class="btn-outline back-to-col" href="~/AdminHome">Quay lại trang chủ</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

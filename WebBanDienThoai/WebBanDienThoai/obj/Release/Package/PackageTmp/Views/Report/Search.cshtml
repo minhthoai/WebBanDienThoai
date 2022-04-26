@@ -1,0 +1,114 @@
+﻿@model  List<WebBanDienThoai.Models.Order>
+@if (Convert.ToInt32(Session["role"].ToString()) == 3)
+{
+    <div style="margin-top: 50px"></div>
+    using (Html.BeginForm("Index", "Report"))
+    {
+
+        <input type="number" name="min" />
+
+
+
+        <input type="submit" value="Search" />
+        <div class="container" style="margin-top: 30px">
+            <div class="row">
+
+                <table class="table">
+                    <tr>
+                        <th>
+                            Mã Đơn
+                        </th>
+                        <th>
+                            Ngày đặt
+                        </th>
+                        <th>
+                            Khách Hàng
+                        </th>
+                        <th>
+                            Trạng thái
+                        </th>
+                        <th>
+                            Phương thức thanh toán
+                        </th>
+                        <th>
+                            Tổng tiền
+                        </th>
+
+                        <th>Xem Chi Tiết</th>
+
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+
+                        <tr class="text-center" style="font-weight:bold;">
+                            <td class="detail_idorder">
+                                <a href="~/Admin/Orders/Details/@item.orderID">#@Html.DisplayFor(modelItem => item.orderID)</a>
+
+                            </td>
+                            <td>
+
+                                @Html.DisplayFor(modelItem => item.CreatedAt)
+                            </td>
+                            <td>
+                                <a href="~/Admin/Orders/Details/@item.orderID"> @Html.DisplayFor(modelItem => item.customerID)</a>
+                            </td>
+                            <td>
+                                @{
+                                    if (item.Status == 1)
+                                    {
+                                        <p class="btn btn-warning btn-xs text-center">Chờ xử lý</p>
+                                    }
+                                    else if (item.Status == 2)
+                                    {
+                                        <p class="btn btn-danger btn-xs text-center">Đã hủy</p>
+                                    }
+                                    else if (item.Status == 3)
+                                    {
+                                        <p class="btn btn-default btn-xs text-center">Đã xác nhận</p>
+                                    }
+                                }
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Payment.PaymentName)
+                            </td>
+                            <td style="color:red;font-weight:bold;font-size:16px;">
+                                @Html.DisplayFor(modelItem => item.TotalMoney)
+                            </td>
+
+                            <td>
+                                @Html.ActionLink("Xem Chi Tiết", "Details", new { id = item.orderID }, htmlAttributes: new { @class = " btn btn-xs btn-primary" })
+                            </td>
+
+
+                        </tr>
+
+
+                    }
+
+                </table>
+
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div id="404" class="page-not not-found bg_w">
+        <div class="columns-container">
+            <div class="container" id="columns">
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="img-404 text-center">
+                            <img src="/Content/ShopPage/images/404.png" alt="Lỗi 404 không tìm thấy trang">
+                        </div>
+                        <div class="text-center"><a class="btn-outline back-to-col" href="~/AdminHome">Quay lại trang chủ</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
