@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WebDBModelStoreContainer" CdmEntityContainer="WebDBEntities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="WebDBModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="WebDBModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Configures">
+      <EntityTypeMapping TypeName="WebDBModel.Configure">
+        <MappingFragment StoreEntitySet="Configure">
+          <ScalarProperty Name="ConfigID" ColumnName="ConfigID" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Favicon" ColumnName="Favicon" />
+          <ScalarProperty Name="NameCompany" ColumnName="NameCompany" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailReceive" ColumnName="EmailReceive" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Hotline" ColumnName="Hotline" />
+          <ScalarProperty Name="Map" ColumnName="Map" />
+          <ScalarProperty Name="FanpageFacebook" ColumnName="FanpageFacebook" />
+          <ScalarProperty Name="IconFacebook" ColumnName="IconFacebook" />
+          <ScalarProperty Name="IconTwiiter" ColumnName="IconTwiiter" />
+          <ScalarProperty Name="IconInstagram" ColumnName="IconInstagram" />
+          <ScalarProperty Name="IconYoutube" ColumnName="IconYoutube" />
+          <ScalarProperty Name="IconGoogle" ColumnName="IconGoogle" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="MetaKeyword" ColumnName="MetaKeyword" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="WebDBModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ViewStatus" ColumnName="ViewStatus" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="WebDBModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="customerName" ColumnName="customerName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Homes">
+      <EntityTypeMapping TypeName="WebDBModel.Home">
+        <MappingFragment StoreEntitySet="Home">
+          <ScalarProperty Name="HomeID" ColumnName="HomeID" />
+          <ScalarProperty Name="Banner_1" ColumnName="Banner_1" />
+          <ScalarProperty Name="Link_banner_1" ColumnName="Link_banner_1" />
+          <ScalarProperty Name="Banner_2" ColumnName="Banner_2" />
+          <ScalarProperty Name="Link_banner_2" ColumnName="Link_banner_2" />
+          <ScalarProperty Name="Banner_3" ColumnName="Banner_3" />
+          <ScalarProperty Name="Link_banner_3" ColumnName="Link_banner_3" />
+          <ScalarProperty Name="Banner_4" ColumnName="Banner_4" />
+          <ScalarProperty Name="Link_banner_4" ColumnName="Link_banner_4" />
+          <ScalarProperty Name="Collection1_Status" ColumnName="Collection1_Status" />
+          <ScalarProperty Name="title_category1" ColumnName="title_category1" />
+          <ScalarProperty Name="Collection_home1" ColumnName="Collection_home1" />
+          <ScalarProperty Name="button_more1" ColumnName="button_more1" />
+          <ScalarProperty Name="Collection2_Status" ColumnName="Collection2_Status" />
+          <ScalarProperty Name="title_category2" ColumnName="title_category2" />
+          <ScalarProperty Name="Banner_Collection2" ColumnName="Banner_Collection2" />
+          <ScalarProperty Name="Banner_Collection2_Link" ColumnName="Banner_Collection2_Link" />
+          <ScalarProperty Name="Collection_home2" ColumnName="Collection_home2" />
+          <ScalarProperty Name="button_more2" ColumnName="button_more2" />
+          <ScalarProperty Name="title_left2" ColumnName="title_left2" />
+          <ScalarProperty Name="Collection_left2" ColumnName="Collection_left2" />
+          <ScalarProperty Name="button_more_left2" ColumnName="button_more_left2" />
+          <ScalarProperty Name="Collection3_Status" ColumnName="Collection3_Status" />
+          <ScalarProperty Name="title_category3" ColumnName="title_category3" />
+          <ScalarProperty Name="Banner_Collection3" ColumnName="Banner_Collection3" />
+          <ScalarProperty Name="Banner_Collection3_Link" ColumnName="Banner_Collection3_Link" />
+          <ScalarProperty Name="Collection_home3" ColumnName="Collection_home3" />
+          <ScalarProperty Name="button_more3" ColumnName="button_more3" />
+          <ScalarProperty Name="title_right3" ColumnName="title_right3" />
+          <ScalarProperty Name="Collection_right3" ColumnName="Collection_right3" />
+          <ScalarProperty Name="button_more_right3" ColumnName="button_more_right3" />
+          <ScalarProperty Name="Collection4_Status" ColumnName="Collection4_Status" />
+          <ScalarProperty Name="title_category4" ColumnName="title_category4" />
+          <ScalarProperty Name="Banner_Collection4" ColumnName="Banner_Collection4" />
+          <ScalarProperty Name="Banner_Collection4_Link" ColumnName="Banner_Collection4_Link" />
+          <ScalarProperty Name="Collection_home4" ColumnName="Collection_home4" />
+          <ScalarProperty Name="button_more4" ColumnName="button_more4" />
+          <ScalarProperty Name="title_left4" ColumnName="title_left4" />
+          <ScalarProperty Name="Collection_left4" ColumnName="Collection_left4" />
+          <ScalarProperty Name="button_more_left4" ColumnName="button_more_left4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ImageProducts">
+      <EntityTypeMapping TypeName="WebDBModel.ImageProduct">
+        <MappingFragment StoreEntitySet="ImageProduct">
+          <ScalarProperty Name="ImageProductID" ColumnName="ImageProductID" />
+          <ScalarProperty Name="FileImages" ColumnName="FileImages" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuNavigations">
+      <EntityTypeMapping TypeName="WebDBModel.MenuNavigation">
+        <MappingFragment StoreEntitySet="MenuNavigation">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="IconMenu" ColumnName="IconMenu" />
+          <ScalarProperty Name="MenuParents" ColumnName="MenuParents" />
+          <ScalarProperty Name="PageStyle" ColumnName="PageStyle" />
+          <ScalarProperty Name="FormatPage" ColumnName="FormatPage" />
+          <ScalarProperty Name="GroupLink" ColumnName="GroupLink" />
+          <ScalarProperty Name="PageContent" ColumnName="PageContent" />
+          <ScalarProperty Name="PageLink" ColumnName="PageLink" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="WebDBModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="TotalMoney" ColumnName="TotalMoney" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="ViewStatus" ColumnName="ViewStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="WebDBModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="orderDetailID" ColumnName="orderDetailID" />
+          <ScalarProperty Name="orderID" ColumnName="orderID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quanlity" ColumnName="Quanlity" />
+          <ScalarProperty Name="TotalProduct" ColumnName="TotalProduct" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="WebDBModel.Payment">
+        <MappingFragment StoreEntitySet="Payment">
+          <ScalarProperty Name="PaymentID" ColumnName="PaymentID" />
+          <ScalarProperty Name="PaymentName" ColumnName="PaymentName" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="WebDBModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="Alias" ColumnName="Alias" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="PriceSale" ColumnName="PriceSale" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="Quanlity" ColumnName="Quanlity" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="DescriptShort" ColumnName="DescriptShort" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Slides">
+      <EntityTypeMapping TypeName="WebDBModel.Slide">
+        <MappingFragment StoreEntitySet="Slide">
+          <ScalarProperty Name="SliderID" ColumnName="SliderID" />
+          <ScalarProperty Name="SortID" ColumnName="SortID" />
+          <ScalarProperty Name="SliderName" ColumnName="SliderName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="WebDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="WebDBModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Fullname" ColumnName="Fullname" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

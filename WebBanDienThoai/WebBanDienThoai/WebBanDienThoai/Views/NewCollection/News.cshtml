@@ -1,0 +1,87 @@
+﻿@model PagedList.IPagedList<WebBanDienThoai.Models.New>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Tin Tức";
+    ViewBag.MetaTittes = "Tin Tức";
+    ViewBag.MetaKeyword = "Tin Tức";
+    ViewBag.MetaDescription = "Tin Tức";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="insCollectionPage">
+    <div class="insBreadcrumb ">
+        <div class="container">
+            <div class="breadcrumb-wrap">
+                <ol class="breadcrumb breadcrumb-arrow hidden-sm hidden-xs">
+                    <li><a href="#" target="_self">Trang chủ</a></li>
+                    <li class="active"><span>Tin tức</span></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <div class="collectionBanner insScroll animated zoomIn">
+        <div class="banner">
+            <img class="insImageload" src="../images/2_1d4fec18e2994965932185db6de6539c_master.jpg" alt="" />
+        </div>
+    </div>
+    <div class="collection_head relative">
+        <div class="container">
+            <div class="boxSortHead relative">
+                <div class="page_head">
+                    <h1 class="collection_title ins_title">
+                        Tin tức
+                    </h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main bg_w">
+            <div class="row">
+                <div class="center_column col-xs-12 col-sm-12 col-md-12 product-col" id="center_column">
+                    <!-- view-product-list-->
+                    <div id="view-product-list" class="view-product-list">
+                        <div id="pd_collection">
+                            <ul class="product-list filter products row notStyle">
+
+                                @foreach (var item in Model)
+                                {
+                                    <ul class="blog-list clearfix">
+                                        <li class="blog-list clearfix">
+                                            @*<a class="productName" href="/products/@item.IdNew/@item.Alias" title="@item.NameNew">@item.NameNew</a>
+                                                <p>@item.DescriptShort</p>
+                                                <span>@item.CreatedAt</span>*@
+                                            <div class="blog-box row">
+
+
+                                                <div class="blog-meta big-meta col-md-8" style="margin-top:25px">
+                                                    <h4><a href="tech-single.html" title="">@item.NameNew</a></h4>
+                                                    <p>@item.DescriptShort</p>
+                                                    <small><p>@item.CreatedAt by @item.Author </p></small>
+
+                                                </div><!-- end meta -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                }
+
+
+                            </ul>
+                            <div class="clearfix"></div>
+                            <div class="col-md-12 content_sortPagiBar pagi">
+                                <div id="pagination">
+                                    @Html.PagedListPager(Model, page => Url.Action("/all", new { page = page }), PagedListRenderOptions.OnlyShowFivePagesAtATime)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left colunm -->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+

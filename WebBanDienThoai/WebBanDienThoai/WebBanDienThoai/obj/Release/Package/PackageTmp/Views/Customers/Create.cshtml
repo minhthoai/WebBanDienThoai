@@ -1,0 +1,141 @@
+﻿
+@model WebBanDienThoai.Models.Customer
+
+@{
+    ViewBag.Title = "Thêm Mới Khách Hàng";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (Convert.ToInt32(Session["role"].ToString()) == 3)
+{
+    <div class="curd" style="margin-right:70px;width:100%;">
+        @using (Html.BeginForm())
+        {
+            <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+                <div class="breadcrumb">
+                    <div class="breadcrumb-left">
+                        <i class="menu-icon fa fa-user" aria-hidden="true"></i>
+                        <a href="~/Admin/Customers" class="title_bread"> Danh sách khách hàng</a>
+                        <span style="color:#ccc;margin:0px 15px;font-size:20px;"> /</span>
+                        <span class="title_bread"> Thêm Mới</span>
+                    </div>
+                    <div class="breadcrumb-add">
+                        @Html.ActionLink("Hủy", "Index", "", new { @class = "btn btn-default" })
+                        <input type="submit" value="Lưu Lại" class="btn btn-primary" />
+                    </div>
+                </div><!-- /.breadcrumb -->
+
+
+            </div>
+
+
+            <div class="createandedit">
+
+                <div class="row">
+                    @Html.AntiForgeryToken()
+
+
+
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-xs-12 col-md-8">
+                        <div class="editcreate">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.customerName, htmlAttributes: new { @class = "control-label" })
+
+                                @Html.EditorFor(model => model.customerName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.customerName, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label" })
+
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label" })
+
+                                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label" })
+
+                                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xs-12 col-md-4">
+                        <div class="visible-status">
+                            <p class="title_st">Hiển thị</p>
+                            <div class="check-st">
+                                <div class="show-st">
+                                    <input type="radio" name="status_cus" value="true" checked /> <span class="hideshow">Hiện</span>
+                                </div>
+                                <div class="show-st">
+                                    <input type="radio" name="status_cus" value="false" /> <span class="hideshow">Ẩn</span>
+                                </div>
+                            </div>
+
+                            <div class="time-stamp">
+                                <p class="title_sts"> Thời Gian:</p>
+                                <input type="text" value="@DateTime.Now" />
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="text-left" style="margin-top:20px;">
+                    <i class="fa fa-angle-double-left" aria-hidden="true" style="color:red !important;"></i>  @Html.ActionLink("Trở lại trang trước", "Index", "", new { style = "color:red;font-size:12px;" })
+                </div>
+
+
+            </div>
+
+
+        }
+    </div>
+
+}
+else
+{
+    <div id="404" class="page-not not-found bg_w">
+        <div class="columns-container">
+            <div class="container" id="columns">
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <div class="img-404 text-center">
+                            <img src="/Content/ShopPage/images/404.png" alt="Lỗi 404 không tìm thấy trang">
+                        </div>
+                        <div class="text-center"><a class="btn-outline back-to-col" href="~/AdminHome">Quay lại trang chủ</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    }
+
